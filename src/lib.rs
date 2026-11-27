@@ -28,11 +28,9 @@ mod day24;
 
 pub fn solve(day: u8, input: &str) -> Result<(String, String), Box<dyn Error>> {
     if !(1..=24).contains(&day) {
-        return Err(io::Error::new(
-            io::ErrorKind::InvalidInput,
-            "day must be between 1 and 24",
-        )
-        .into());
+        return Err(
+            io::Error::new(io::ErrorKind::InvalidInput, "day must be between 1 and 24").into(),
+        );
     }
 
     match day {

@@ -12,11 +12,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     let day: u8 = day.parse()?;
 
     if !(1..=24).contains(&day) {
-        return Err(io::Error::new(
-            io::ErrorKind::InvalidInput,
-            "day must be between 1 and 24",
-        )
-        .into());
+        return Err(
+            io::Error::new(io::ErrorKind::InvalidInput, "day must be between 1 and 24").into(),
+        );
     }
 
     let input_path = args
